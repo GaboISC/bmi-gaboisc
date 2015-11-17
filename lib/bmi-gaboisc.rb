@@ -1,15 +1,14 @@
 class BodyMassIndex
-@weight
-@height 
+attr_accessor :weight, :height 
 
-def BodyMassIndex(w, h)
-@weight=w 
-@height=h 
+def initialize(weight, height)
+@weight=weight 
+@height=height 
 end
 
 def calculate_index
 @wh = @weight / (@height * @height)	
-return  @wh
+puts 'El indice de masa corporal es: '+ @wh.to_s
 end
 
 end
